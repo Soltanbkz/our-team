@@ -80,3 +80,37 @@ window.addEventListener("scroll", function() {
     element.style.opacity = "1";
   }
 });
+
+
+function t898_init(recId) {
+    var rec = document.getElementById('rec' + recId);
+    if (!rec)
+        return;
+    var container = rec.querySelector('.t898');
+    if (!container)
+        return;
+    rec.setAttribute('data-animationappear', 'off');
+    rec.style.opacity = 1;
+    var whatsApp = rec.querySelector('.t898__icon-whatsapp_wrapper');
+    if (whatsApp) {
+        var whatsAppHref = whatsApp.getAttribute('href');
+        if (whatsAppHref && (whatsAppHref.indexOf('whatsapp://') > -1 || whatsAppHref.indexOf('wa.me') > -1)) {
+            t898_removeExtraSymbolsFromWhatsApp(whatsApp, whatsAppHref)
+        }
+    }
+    if (window.lazy === 'y' || document.getElementById('allrecords').getAttribute('data-tilda-lazy') === 'yes') {
+        t_onFuncLoad('t_lazyload_update', function() {
+            t_lazyload_update()
+        })
+    }
+}
+function t898_removeExtraSymbolsFromWhatsApp(whatsApp, whatsAppHref) {
+    if (whatsAppHref && whatsAppHref.indexOf('?text=') !== -1) {
+        var whatsAppHrefArr = whatsAppHref.split('?text=');
+        whatsAppHrefArr[0] = whatsAppHrefArr[0].replace(/[\(\)+-]/g, '');
+        whatsAppHref = whatsAppHrefArr[0] + '?text=' + whatsAppHrefArr[1]
+    } else {
+        whatsAppHref = whatsAppHref.replace(/[\(\)+-]/, '')
+    }
+    whatsApp.setAttribute('href', whatsAppHref)
+}
