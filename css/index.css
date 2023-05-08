@@ -1106,8 +1106,8 @@ form textarea {
     border-radius: 3px;
     transform: translateX(0%) translateY(-50%);
     top: 50%;
-    background: #292929;
-    color: #fff;
+    background: var(--text-color);
+    color: var(--bg-color);
     opacity: 0;
     transition: all 0.1s linear
 }
@@ -1122,7 +1122,7 @@ form textarea {
     top: 50%;
     right: -20px;
     transform: translateY(-50%);
-    border-left-color: #292929
+    border-left-color: var(--text-color)
 }
 
 .t898__hint {
@@ -1135,8 +1135,8 @@ form textarea {
     border-radius: 3px;
     transform: translateX(0%) translateY(-50%);
     top: 50%;
-    background: #292929;
-    color: #fff;
+    background: var(--text-color);
+    color: var(--bg-color);
     opacity: .85;
     transition: all 0.1s linear
 }
@@ -1306,7 +1306,8 @@ form textarea {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    transition: all 0.2s linear
+    transition: all 0.2s linear;
+    background-color: var(--main-color);
 }
 
 .t898__icon {
@@ -1336,8 +1337,8 @@ form textarea {
     border-radius: 3px;
     transform: translateX(0%) translateY(-50%);
     top: 50%;
-    background: #292929;
-    color: #fff;
+    background: var(--text-color);
+    color: var(--bg-color);
     transition: all 0.1s linear
 }
 
