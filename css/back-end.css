@@ -419,6 +419,22 @@ span {
     flex-wrap: wrap;
 }
 
+.home-main{
+    background-color: var(--main-color);
+    width: 160vh;
+    height: 80vh;
+    border-radius: 20px;
+}
+
+.home-main h1 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+}
+.home{
+    padding-top: 5%;
+}
+
 .card {
     margin: 10px;
     background-color: var(--bg-color);
@@ -986,10 +1002,6 @@ form textarea {
     flex-direction: column;
   }
   
-  .group {
-    position: relative;
-  }
-  
   .form .group label {
     font-size: 14px;
     color: rgb(99, 102, 102);
@@ -999,9 +1011,9 @@ form textarea {
     background-color: #fff;
     transition: all .3s ease;
   }
-  
-  .form .group input,
-  .form .group textarea {
+
+  .form input,
+  .form textarea {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -1011,17 +1023,17 @@ form textarea {
     background-color: transparent;
   }
   
-  .form .group input:placeholder-shown+ label, .form .group textarea:placeholder-shown +label {
+  .form input:placeholder-shown+ label, .form textarea:placeholder-shown +label {
     top: 10px;
     background-color: transparent;
   }
   
-  .form .group input:focus,
-  .form .group textarea:focus {
+  .form input:focus,
+  .form textarea:focus {
     border-color: var(--main-color);
   }
   
-  .form .group input:focus+ label, .form .group textarea:focus +label {
+  .form input:focus+ label, .form textarea:focus +label {
     top: -10px;
     left: 10px;
     background-color: var(--bg-color);
@@ -1030,7 +1042,7 @@ form textarea {
     font-size: 14px;
   }
   
-  .form .group textarea {
+  .form textarea {
     resize: none;
     height: 100px;
   }
@@ -1790,11 +1802,11 @@ form textarea {
         bottom: 3%;
     }
 
-    .form .group input{
+    .form input{
         width: 280px;
     }
 
-    .form .group textarea{
+    .form textarea{
         width: 280px !important;
     }
 

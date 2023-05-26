@@ -81,7 +81,6 @@ window.addEventListener("scroll", function() {
   }
 });
 
-
 function t898_init(recId) {
     var rec = document.getElementById('rec' + recId);
     if (!rec)
