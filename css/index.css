@@ -326,7 +326,7 @@ span {
 
 .services-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
     justify-content: center;
     gap: 1rem;
     margin-top: 2rem;
@@ -986,10 +986,6 @@ form textarea {
     flex-direction: column;
   }
   
-  .group {
-    position: relative;
-  }
-  
   .form .group label {
     font-size: 14px;
     color: rgb(99, 102, 102);
@@ -999,9 +995,9 @@ form textarea {
     background-color: #fff;
     transition: all .3s ease;
   }
-  
-  .form .group input,
-  .form .group textarea {
+
+  .form input,
+  .form textarea {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -1011,17 +1007,17 @@ form textarea {
     background-color: transparent;
   }
   
-  .form .group input:placeholder-shown+ label, .form .group textarea:placeholder-shown +label {
+  .form input:placeholder-shown+ label, .form textarea:placeholder-shown +label {
     top: 10px;
     background-color: transparent;
   }
   
-  .form .group input:focus,
-  .form .group textarea:focus {
+  .form input:focus,
+  .form textarea:focus {
     border-color: var(--main-color);
   }
   
-  .form .group input:focus+ label, .form .group textarea:focus +label {
+  .form input:focus+ label, .form textarea:focus +label {
     top: -10px;
     left: 10px;
     background-color: var(--bg-color);
@@ -1030,7 +1026,7 @@ form textarea {
     font-size: 14px;
   }
   
-  .form .group textarea {
+  .form textarea {
     resize: none;
     height: 100px;
   }
@@ -1049,6 +1045,7 @@ form textarea {
   .form button:hover {
     background-color: var(--hover);
   }
+
   
   
   .modal-btn:checked ~ .modal .modal-wrap{
@@ -1421,6 +1418,19 @@ form textarea {
     border-radius: 50%;
     width: 40px;
     height: 40px
+}
+
+.bounce-animation {
+    animation: bounce 1.5s infinite;
+}  
+
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
 }
 
 @keyframes t898__btn-pulsate {
